@@ -10,7 +10,7 @@ namespace Lab3
             Console.WriteLine("Hello, what would you like me to call you?");
             string name = Console.ReadLine();
 
-            Console.WriteLine("Nice to meet you, " + name + ". Thank you for using this program.");
+            Console.WriteLine("Nice to meet you, " + name + ". Thank you for using this program.\n");
 
             bool repeat;
 
@@ -45,7 +45,7 @@ namespace Lab3
 
                     if (check == false)
                     {
-                        Console.WriteLine("Your input was not an integer, " + name + ". Please enter an integer between 1 and 100.");
+                        Console.WriteLine("\nYour input was not an integer, " + name + ". Please enter an integer between 1 and 100.");
                         input = Console.ReadLine();
                         Checker();
                     }
@@ -56,19 +56,19 @@ namespace Lab3
 
                     if (inputNum < 0)
                     {
-                        Console.WriteLine("The integer cannot be a negative number, " + name + ". Please enter an integer between 1 and 100.");
+                        Console.WriteLine("\nThe integer cannot be a negative number, " + name + ". Please enter an integer between 1 and 100.");
                         input = Console.ReadLine();
                         Checker();
                     }
                     else if (inputNum == 0)
                     {
-                        Console.WriteLine("The integer cannot be zero, " + name + ". Please enter an integer between 1 and 100.");
+                        Console.WriteLine("\nThe integer cannot be zero, " + name + ". Please enter an integer between 1 and 100.");
                         input = Console.ReadLine();
                         Checker();
                     }
                     else if (inputNum > 100)
                     {
-                        Console.WriteLine("The integer cannot be greater than 100, " + name + ". Please enter an integer between 1 and 100.");
+                        Console.WriteLine("\nThe integer cannot be greater than 100, " + name + ". Please enter an integer between 1 and 100.");
                         input = Console.ReadLine();
                         Checker();
                     }
@@ -76,26 +76,26 @@ namespace Lab3
 
                 if (evenOdd == "Odd")
                 {
-                    Console.WriteLine(inputNum + " " + evenOdd + ".");
+                    Console.WriteLine("\n" + inputNum + " " + evenOdd + ".");
                 }
                 else if (evenOdd == "Even")
                 {
                     if (inputNum >= 2 && inputNum <= 25)
                     {
-                        Console.WriteLine(inputNum + " " + evenOdd + " and less than 25.");
+                        Console.WriteLine("\n" + inputNum + " " + evenOdd + " and less than 25.");
                     }
                     else if (inputNum >= 26 && inputNum <= 60)
                     {
-                        Console.WriteLine(inputNum + " " + evenOdd + ".");
+                        Console.WriteLine("\n" + inputNum + " " + evenOdd + ".");
                     }
                     else if (inputNum > 60)
                     {
-                        Console.WriteLine(inputNum + " " + evenOdd + ".");
+                        Console.WriteLine("\n" + inputNum + " " + evenOdd + ".");
                     }
                 }
 
 
-                Console.WriteLine("Would you like to continue? (y/n)");
+                Console.WriteLine("\nWould you like to continue? (y/n)");
                 string cont = Console.ReadLine();
                 cont.ToLower();
 
@@ -106,6 +106,7 @@ namespace Lab3
                     if (cont == "y" || cont == "yes")
                     {
                         repeat = true;
+                        Console.WriteLine("\n");
                     }
                     else if (cont == "n" || cont == "no")
                     {
@@ -113,7 +114,7 @@ namespace Lab3
                     }
                     else
                     {
-                        Console.WriteLine("Please indicate whether you would like to continue. Valid answers are y/n or yes/no. \nContinue?");
+                        Console.WriteLine("\nPlease indicate whether you would like to continue. Valid answers are y/n or yes/no. \nContinue?");
                         cont = Console.ReadLine();
                         cont.ToLower();
                         Continue();
@@ -130,7 +131,7 @@ namespace Lab3
 
             } while (repeat == true);
 
-            Console.WriteLine("Goodbye " + name + "!");
+            Console.WriteLine("\nGoodbye " + name + "!");
 
         }
     }
